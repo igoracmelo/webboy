@@ -160,11 +160,12 @@ body {
 
 .button-middle:hover .button-middle__shape {
   background-color: #555457;
+  background-image: linear-gradient(45deg, hsl(143, 3%, 45%), hsl(165, 2%, 43%));
 }
 
 .button-middle.active .button-middle__shape {
   /* background-color: ; */
-  background-image: linear-gradient(45deg, hsl(45, 48%, 50%), hsl(160, 2%, 34%));
+  background-image: linear-gradient(45deg, hsl(45, 48%, 50%), hsl(42, 45%, 35%));
 }
 
 .button-middle__text {
