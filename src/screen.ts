@@ -25,17 +25,17 @@ const colors: Record<string, string> = {
 }
 
 
-const newTileMap = () => {
-  const tileMap: number[][] = []
-  for (let l = 0; l < 18; l++) {
-    const row: number[] = []
-    tileMap.push(row)
-    for (let c = 0; c < 20; c++) {
-      row.push(TileType.EMPTY)
-    }
-  }
-  return tileMap
-}
+// const newTileMap = () => {
+//   const tileMap: number[][] = []
+//   for (let l = 0; l < 18; l++) {
+//     const row: number[] = []
+//     tileMap.push(row)
+//     for (let c = 0; c < 20; c++) {
+//       row.push(TileType.EMPTY)
+//     }
+//   }
+//   return tileMap
+// }
 
 // const fgTileMap = newTileMap()
 // const bgTileMap = newTileMap()
@@ -100,23 +100,23 @@ export const init = () => {
   // }
 }
 
-const paintTileMap = (tileMap: number[][]) => {
-  for (let dl = 0; dl < 18; dl++) {
-    for (let dc = 0; dc < 20; dc++) {
-      const tileIndex = tileMap[dl][dc]
-      const curr = tilesets[tileIndex]
-      const rows = curr.trim().split('\n').map(row => row.trim())
+// const paintTileMap = (tileMap: number[][]) => {
+//   for (let dl = 0; dl < 18; dl++) {
+//     for (let dc = 0; dc < 20; dc++) {
+//       const tileIndex = tileMap[dl][dc]
+//       const curr = tilesets[tileIndex]
+//       const rows = curr.trim().split('\n').map(row => row.trim())
 
-      rows.forEach((row, l) => {
-        row.split('').forEach((symbol, c) => {
-          const color = colors[symbol]
-          ctx.fillStyle = color
-          ctx.fillRect(c + (dc * 8), l + (dl * 8), 1, 1)
-        })
-      })
-    }
-  }
-}
+//       rows.forEach((row, l) => {
+//         row.split('').forEach((symbol, c) => {
+//           const color = colors[symbol]
+//           ctx.fillStyle = color
+//           ctx.fillRect(c + (dc * 8), l + (dl * 8), 1, 1)
+//         })
+//       })
+//     }
+//   }
+// }
 
 const paintTiles = (ctx: CanvasRenderingContext2D, tiles: Tile[]) => {
   for (const tile of tiles) {
